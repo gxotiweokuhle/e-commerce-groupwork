@@ -1,80 +1,61 @@
-const products = [
-    {
-      id: 1,
-      image:
-        "https://i.postimg.cc/jSHZ1BFG/device-mockup-gradient-laptop-mockup-laptop.jpg",
-      name: "",
-      desc: "",
-      price: 1,
-      quantity: 1,
-    },
-    {
-      id: 2,
-      image:
-        "https://i.postimg.cc/jSHZ1BFG/device-mockup-gradient-laptop-mockup-laptop.jpg",
-      name: "",
-      desc: "",
-      price: 2,
-      quantity: 2,
-    },
-    {
-      id: 3,
-      image:
-        "https://i.postimg.cc/jSHZ1BFG/device-mockup-gradient-laptop-mockup-laptop.jpg",
-      name: "",
-      desc: "",
-      price: 3,
-      quantity: 3,
-    },
-    {
-      id: 4,
-      image:
-        "https://i.postimg.cc/jSHZ1BFG/device-mockup-gradient-laptop-mockup-laptop.jpg",
-      name: "",
-      desc: "",
-      price: 4,
-      quantity: 4,
-    },
-    {
-      id: 5,
-      image:
-        "https://i.postimg.cc/jSHZ1BFG/device-mockup-gradient-laptop-mockup-laptop.jpg",
-      name: "",
-      desc: "",
-      price: 5,
-      quantity: 5,
-    },
-    {
-      id: 6,
-      image:
-        "https://i.postimg.cc/jSHZ1BFG/device-mockup-gradient-laptop-mockup-laptop.jpg",
-      name: "",
-      desc: "",
-      price: 6,
-      quantity: 6,
-    },
-  ];
+let products = [
+  {
+    id: 1,
+    Image: "https://i.postimg.cc/Y2LSPgb2/ervo-rocks-Zam8-Tv-Eg-N5o-unsplash1.jpg",
+    name: `Air Pods Max`,
+    price: `$1000`,
+  },
+  {
+    id: 2,
+    Image: "https://i.postimg.cc/nrqph4Pv/jason-leung-x-R4-JHzr69-Og-unsplash1.jpg",
+    name: `Beats by Dr Dre`,
+    price: `$600`,
+  },
+  {
+    id: 3,
+    Image: "https://i.postimg.cc/q7QrtBw5/dmitry-chernyshov-m-P7a-PSUm7a-E-unsplash1.jpg",
+    name: `MacBook Pro`,
+    price: `$1200`,
+  },
+  {
+    id: 4,
+    Image: "https://i.postimg.cc/d1L0wTFB/jan-vlacuha-7c-SLfi5m-WOA-unsplash1.jpg",
+    name: `MacBook Air`,
+    price: `$700`,
+  },
+  {
+    id: 5,
+    Image: "https://i.postimg.cc/ZK0W42bm/v-a-tao-Oxvl-DO8-Rw-Kg-unsplash.jpg",
+    name: `iPhone 11`,
+    price: `$500`,
+  },
+  {
+    id: 6,
+    Image: "https://i.postimg.cc/Kz6mbqJG/thom-bradley-1-NZcjdo2h-KQ-unsplash1.jpg",
+    name: `iPhone 11 Pro`,
+    price: `$800`,
+  },
+];
+let productsCart = document.getElementById("products");
+products.forEach((data) => {
+  productsCart.innerHTML += `
+  <div class="Cart-List" style="width:200px, text-align:center;">
+    <img class="card-img-top" src="${data.Image}" alt="Card image">
+    <div class="card-body text-center">
+      <h4 class="card-title">${data.name}</h4>
+      <p class="card-price">${data.price}</p>
+      <button onclick="addToCart(${data.id})" id="addbtn">Add to cart</button>
+    </div>`;
+    
+});
   
-  function displayProducts() {
-    const ourProducts = document.getElementById("products");
-    products.forEach((product) => {
-      const productElement = document.createElement("div");
-      productElement.innerHTML = `
-          <img src="${product.image}" alt="${product.name}" >
-          <h3>${product.name}</h3>
-          <p>${product.desc}</p>
-          <p> R ${product.price}</p>        
-          <button onclick="addToCart(${product.id})" >Add to cart</button>`;
-      ourProducts.appendChild(productElement);
-    });
-  }
-  
-  const cart = [];
+  let cart = [];
   
   function addToCart(productId) {
-    const cartContainer = document.getElementById("cart-container");
-    const product = products.find((product) => product.id === productId);
-  
+    let cartContainer = document.getElementById("cart-body");
+    cartContainer = ""
+    let product = products.find((product) => product.id === productId);
+    localStorage.setItem("Products", JSON.stringify(cart));
     if (product && product.quantity > 0) {
       cart.push(product);
       product.quantity--;
@@ -83,11 +64,11 @@ const products = [
   }
   
   function updateCart() {
-      const cartContainer = document.getElementById("cart-container");
+      let cartContainer = document.getElementById("cart-body");
       cartContainer.innerHTML = "";
   
       cart.forEach(product => {
-          const cartItem = document.createElement("div")
+          let cartItem = document.createElement("div")
           cartItem.innerHTML = `<span>${product.name}</span>
           <span>${product.price}</span>
           `;
@@ -96,7 +77,7 @@ const products = [
 }
 
 // function setItem() {
-//   localStorage.setItem("Products", JSON.stringify(cart));
+ //localStorage.setItem("Products", JSON.stringify(cart));
 // }
 
 function loadItems() {
@@ -111,4 +92,4 @@ window.addEventListener("load", function () {
   loadItems();
 });
 
-displayProducts();
+// displayProducts();
