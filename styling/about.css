@@ -44,3 +44,18 @@ footer {
     margin: 10px;
     padding: 10px;
 }
+
+.card {
+    background: black !important;
+    color: #ED406E !important;
+    margin: 10px;
+}
+
+#team-players {
+    columns: 3;
+    
+}
+
+.card-img-top {
+    padding: 5px !important;
+}
