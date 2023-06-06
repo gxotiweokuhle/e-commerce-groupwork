@@ -32,7 +32,9 @@
                 </ul>
                 <div class="ms-auto">
                     <!-- <a class="nav-link" href="#"><img src="https://i.postimg.cc/xC5sY8MM/shopping-cart-xxl.png" width="25" height="25" class="d-inline-block rounded-circle me-2">Cart</a> -->
-                    <button type="button" class="btn btn-primary  mx-5" data-bs-toggle="modal" data-bs-target="#myModal" id="cart-btn"><img src="https://i.postimg.cc/xC5sY8MM/shopping-cart-xxl.png" width="25" height="25" class="d-inline-block rounded-circle me-2"> Open Cart</button>
+                    <button type="button" class="btn btn-primary  mx-5" data-bs-toggle="modal" data-bs-target="#myModal" id="cart-btn">
+                        <img src="https://i.postimg.cc/xC5sY8MM/shopping-cart-xxl.png" width="25" height="25" class="d-inline-block rounded-circle me-2">
+                         Open Cart</button>
                 </div>
             </div>
             
@@ -43,11 +45,14 @@
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title">Added Items</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+              <button type="button"  class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div id="cart-body"></div>
+            <div id="cart-body">
+            <div id="results"><h5>Total</h5></div>
+            </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            
+              
             </div>
           </div>
         </div>

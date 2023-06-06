@@ -59,8 +59,8 @@ main {
     border-radius: 10px;
     background-color: black;
     margin: 5px;
-    height: 35px;
-    width: 150px;
+    height: 50px;
+    width: 200px;
     color: white !important;
     font-size:large;
     overflow: hidden;
@@ -77,8 +77,6 @@ main {
     -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
-
-
 
 /* Footer styling */
 
