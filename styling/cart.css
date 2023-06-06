@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+main {
+    min-height: 100vh;
+}
+.nav-link {
+    color: hotpink !important;
+}
+.navbar-toggler {
+    background-color: hotpink!important;
+}
+.cart {
+    color: hotpink;
+}
+body{
+    scroll-behavior: smooth;
+}
+h3{
+    color: hotpink;
+}
+#card-body{
+    display: flex;
+    justify-content: center;
+}
