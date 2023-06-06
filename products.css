@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.nav-link {
+    color: hotpink !important;
+}
+
+.navbar-toggler {
+    background-color: hotpink!important;
+}
+
+.cart {
+    color: hotpink;
+}
+
+/* img {
+    width: 70px;
+    height: 70px;
+    padding: 10px
+} */
