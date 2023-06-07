@@ -31,12 +31,35 @@
                     </li>
                 </ul>
                 <div class="ms-auto">
-                    <a class="nav-link" href="#"><img src="https://i.postimg.cc/xC5sY8MM/shopping-cart-xxl.png" width="25" height="25" class="d-inline-block rounded-circle me-2">Cart</a>
+                    <!-- <a class="nav-link" href="#"><img src="https://i.postimg.cc/xC5sY8MM/shopping-cart-xxl.png" width="25" height="25" class="d-inline-block rounded-circle me-2">Cart</a> -->
+                    <button type="button" class="btn btn-primary  mx-5" data-bs-toggle="modal" data-bs-target="#myModal" id="cart-btn">
+                        <img src="https://i.postimg.cc/xC5sY8MM/shopping-cart-xxl.png" width="25" height="25" class="d-inline-block rounded-circle me-2">
+                         Open Cart</button>
                 </div>
             </div>
             
         </nav>
     </header>
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Added Items</h4>
+              <button type="button"  class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div id="cart-body">
+            <div id="results"><h5>Total</h5></div>
+            </div>
+            <div class="modal-footer">
+            
+              
+            </div>
+          </div>
+        </div>
+      </div>
+        <!--<div class="heading">
+            <h3 class="text-center mt-2">Shopping Cart</h3>
+        </div> -->
 
     <main>
         <div class="p-3" id="products">
