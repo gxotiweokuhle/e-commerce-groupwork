@@ -3,43 +3,43 @@ const products = [
     id: 1,
     Image: "https://i.postimg.cc/Y2LSPgb2/ervo-rocks-Zam8-Tv-Eg-N5o-unsplash1.jpg",
     name: "Air Pods Max",
-    price: "$1000",
-    quantity: 1,
+    price: "1000",
+    quantity: 5,
   },
   {
     id: 2,
     Image: "https://i.postimg.cc/nrqph4Pv/jason-leung-x-R4-JHzr69-Og-unsplash1.jpg",
     name: "Beats by Dr Dre",
-    price: "$600",
-    quantity: 2,
+    price: "600",
+    quantity: 5,
   },
   {
     id: 3,
     Image: "https://i.postimg.cc/q7QrtBw5/dmitry-chernyshov-m-P7a-PSUm7a-E-unsplash1.jpg",
     name: `MacBook Pro`,
-    price: `$1200`,
-    quantity: 3,
+    price: `1200`,
+    quantity: 5,
   },
   {
     id: 4,
     Image: "https://i.postimg.cc/d1L0wTFB/jan-vlacuha-7c-SLfi5m-WOA-unsplash1.jpg",
     name: `MacBook Air`,
-    price: `$700`,
-    quantity: 4,
+    price: `700`,
+    quantity: 5,
   },
   {
     id: 5,
     Image: "https://i.postimg.cc/ZK0W42bm/v-a-tao-Oxvl-DO8-Rw-Kg-unsplash.jpg",
     name: `iPhone 11`,
-    price: `$500`,
+    price: `500`,
     quantity: 5,
   },
   {
     id: 6,
     Image: "https://i.postimg.cc/Kz6mbqJG/thom-bradley-1-NZcjdo2h-KQ-unsplash1.jpg",
     name: `iPhone 11 Pro`,
-    price: `$800`,
-    quantity: 6,
+    price: `800`,
+    quantity: 5,
   }
   
 ];
@@ -94,10 +94,14 @@ function updateCart() {
 
 function calculateTotal() {
   let totalElement = document.getElementById("total");
-  let total = cart.reduce((accumulate, product) => {
-    let price = Number(product.price.replace("$", ""));
-    return accumulate = price * quantity;
-  }, 0);
+  let total = 0 
+  cart.forEach(item => {
+    total +=  eval(item.price)
+  })
+  // let total = cart.reduce((accumulate, product) => {
+  //   let price = Number(product.price.replace("$", ""));
+  //   return accumulate = price * quantity;
+  // }, 0);
   totalElement.textContent = `$${total}`;
 }
 
