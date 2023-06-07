@@ -24,6 +24,6 @@ let featured = [
       <img class="card-img-top" src="${data.Image}" alt="Card image" style="width:300px;>
       <div class="card-body">
         <h4 class="card-title">${data.name}</h4>
-        <button class="btn btn-outline-danger">Find Out More</button>
+        <a href="../pages/products.html" class="btn btn-outline-danger">Find Out More</a>
       </div>`;
   });
